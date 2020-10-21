@@ -1,0 +1,15 @@
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\bin\Debug\DnD Experience Planner.exe.config
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\bin\Debug\DnD Experience Planner.exe
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\bin\Debug\DnD Experience Planner.pdb
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner.csprojAssemblyReference.cache
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\MainWindow.g.cs
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\App.g.cs
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner_MarkupCompile.cache
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner_MarkupCompile.lref
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\MainWindow.baml
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner.g.resources
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD_Experience_Planner.Properties.Resources.resources
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner.csproj.GenerateResource.cache
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner.csproj.CoreCompileInputs.cache
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner.exe
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Debug\DnD Experience Planner.pdb

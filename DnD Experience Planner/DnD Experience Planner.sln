@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnD Experience Planner", "DnD Experience Planner\DnD Experience Planner.csproj", "{90854055-7C4A-4B94-8287-72A8F2604946}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{4EBCC1CE-B335-418C-942B-9CDE993265E6}"
+	ProjectSection(SolutionItems) = preProject
+		DnD Experience Planner\Classes\Character.cs = DnD Experience Planner\Classes\Character.cs
+		DnD Experience Planner\Classes\CharacterList.cs = DnD Experience Planner\Classes\CharacterList.cs
+		DnD Experience Planner\Classes\Monster.cs = DnD Experience Planner\Classes\Monster.cs
+		DnD Experience Planner\Classes\MonsterList.cs = DnD Experience Planner\Classes\MonsterList.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90854055-7C4A-4B94-8287-72A8F2604946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90854055-7C4A-4B94-8287-72A8F2604946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90854055-7C4A-4B94-8287-72A8F2604946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90854055-7C4A-4B94-8287-72A8F2604946}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47BA81F8-2864-4AC2-B53E-6894202AD32D}
+	EndGlobalSection
+EndGlobal
