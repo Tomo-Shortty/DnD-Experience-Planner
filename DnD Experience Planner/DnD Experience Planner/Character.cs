@@ -13,7 +13,7 @@ public class Character
 	{
 		if (characterLevel.Equals(""))
         {
-			throw new Exception("Character level has not been specified.")
+			throw new Exception("Character level has not been specified.");
         } 
 		else
         {
