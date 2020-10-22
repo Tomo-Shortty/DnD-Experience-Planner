@@ -5,14 +5,6 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnD Experience Planner", "DnD Experience Planner\DnD Experience Planner.csproj", "{90854055-7C4A-4B94-8287-72A8F2604946}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{4EBCC1CE-B335-418C-942B-9CDE993265E6}"
-	ProjectSection(SolutionItems) = preProject
-		DnD Experience Planner\Classes\Character.cs = DnD Experience Planner\Classes\Character.cs
-		DnD Experience Planner\Classes\CharacterList.cs = DnD Experience Planner\Classes\CharacterList.cs
-		DnD Experience Planner\Classes\Monster.cs = DnD Experience Planner\Classes\Monster.cs
-		DnD Experience Planner\Classes\MonsterList.cs = DnD Experience Planner\Classes\MonsterList.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
