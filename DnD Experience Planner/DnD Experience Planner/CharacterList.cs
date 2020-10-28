@@ -11,6 +11,9 @@ public class CharacterList
 	private int totalDeadlyXP;
 	private int totalAdventuringDayXP;
 
+	/*
+	 * Constructor for the character list.
+	 */
 	public CharacterList()
 	{
 		this.characterList = new List<Character>();
@@ -73,10 +76,11 @@ public class CharacterList
     }
 
 	/*
-	 * Adds a character element to the character list.
+	 * Sets the experience of the character element and adds it to the character list.
 	 */
 	public void AddToCharacterList(Character character)
     {
+		character.SetCharacterXP(character.GetCharacterLevel());
 		this.characterList.Add(character);
     }
 
