@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class CharacterList
 {
 	private List<Character> characterList;
+	private int totalCharacters;
 	private int totalEasyXP;
 	private int totalMediumXP;
 	private int totalHardXP;
@@ -16,11 +17,11 @@ public class CharacterList
 	}
 
 	/*
-	 * Gets the number of character elements in the character list.
+	 * Gets the total number of individual characters in the character list.
 	 */
-	public int GetNumCharacterRows()
+	public int GetTotalNumberOfCharacters()
     {
-		return this.characterList.Count;
+		return this.totalCharacters;
     }
 
 	/*
@@ -85,6 +86,7 @@ public class CharacterList
 	public void ClearCharacterList()
     {
 		this.characterList.Clear();
+		this.totalCharacters = 0;
 		this.totalEasyXP = 0;
 		this.totalMediumXP = 0;
 		this.totalHardXP = 0;
@@ -93,12 +95,13 @@ public class CharacterList
     }
 
 	/*
-	 * Calculates the total experience values in the character list. Assumes character experience has already
-	 * been assigned to each character element.
+	 * Calculates the total number of characters and experience values in the character list. Assumes character experience 
+	 * has already been assigned to each character element.
 	 */
-	public void CalculateTotalCharacterXP()
+	public void CalculateCharacterTotals()
     {
 		foreach (Character character in this.characterList) {
+			this.totalCharacters += character.GetNumberOfCharacters();
 			this.totalEasyXP += character.GetEasyCharacterXP();
 			this.totalMediumXP += character.GetMediumCharacterXP();
 			this.totalHardXP += character.GetHardCharacterXP();
