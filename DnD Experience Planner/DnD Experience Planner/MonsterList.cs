@@ -8,6 +8,7 @@ public class MonsterList
 	private int totalMonsterXP;
 	private double XPAward;
 	private double adjustedMonsterXP;
+	private string encounterDifficulty;
 
 	/*
 	 * Constructor for the monster list.
@@ -47,6 +48,14 @@ public class MonsterList
 	public double GetAdjustedMonsterXP()
     {
 		return this.adjustedMonsterXP;
+    }
+
+	/*
+	 * Gets the encounter difficulty.
+	 */
+	public string GetEncounterDifficulty()
+    {
+		return this.encounterDifficulty;
     }
 
 	/*
@@ -123,5 +132,36 @@ public class MonsterList
         {
 			this.adjustedMonsterXP *= 4;
         }
-    }
+
+		//determine the encounter difficulty by comparing the adjusted monster XP with total character list XP
+		if (this.adjustedMonsterXP >= characterList.GetTotalEasyXP())
+		{
+			if (this.adjustedMonsterXP >= characterList.GetTotalMediumXP())
+			{
+				if (this.adjustedMonsterXP >= characterList.GetTotalHardXP())
+				{
+					if (this.adjustedMonsterXP >= characterList.GetTotalDeadlyXP())
+					{
+						this.encounterDifficulty = "Deadly";
+					}
+					else
+					{
+						this.encounterDifficulty = "Hard";
+					}
+				}
+				else
+				{
+					this.encounterDifficulty = "Medium";
+				}
+			}
+			else
+			{
+				this.encounterDifficulty = "Easy";
+			}
+		}
+		else
+		{
+			this.encounterDifficulty = "Very Easy";
+		}
+	}
 }
