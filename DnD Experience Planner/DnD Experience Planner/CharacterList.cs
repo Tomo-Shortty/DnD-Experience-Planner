@@ -69,11 +69,11 @@ public class CharacterList
 
 	/*
 	 * Creates a new character element that is to be added the character list.
-	 */
+	 *
 	public Character CreateCharacter(string characterLevel, int quantity)
     {
 		return new Character(characterLevel, quantity);
-    }
+    }*/
 
 	/*
 	 * Sets the experience of the character element and adds it to the character list.
@@ -90,12 +90,7 @@ public class CharacterList
 	public void ClearCharacterList()
     {
 		this.characterList.Clear();
-		this.totalCharacters = 0;
-		this.totalEasyXP = 0;
-		this.totalMediumXP = 0;
-		this.totalHardXP = 0;
-		this.totalDeadlyXP = 0;
-		this.totalAdventuringDayXP = 0;
+		ResetCharacterTotals();
     }
 
 	/*
@@ -104,6 +99,8 @@ public class CharacterList
 	 */
 	public void CalculateCharacterTotals()
     {
+		ResetCharacterTotals();
+
 		foreach (Character character in this.characterList) {
 			this.totalCharacters += character.GetNumberOfCharacters();
 			this.totalEasyXP += character.GetEasyCharacterXP();
@@ -113,4 +110,17 @@ public class CharacterList
 			this.totalAdventuringDayXP += character.GetAdventuringDayXP();
         }
     }
+
+	/*
+	 * Resets all total experience values.
+	 */
+	private void ResetCharacterTotals()
+    {
+		this.totalCharacters = 0;
+		this.totalEasyXP = 0;
+		this.totalMediumXP = 0;
+		this.totalHardXP = 0;
+		this.totalDeadlyXP = 0;
+		this.totalAdventuringDayXP = 0;
+	}
 }

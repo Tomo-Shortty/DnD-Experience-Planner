@@ -60,11 +60,11 @@ public class MonsterList
 
 	/*
 	 * Creates a new monster element.
-	 */
+	 *
 	public Monster CreateMonster(string challengeRating, int quantity)
     {
 		return new Monster(challengeRating, quantity);
-    }
+    }*/
 
 	/*
 	 * Sets the experience of the monster element and adds it to the list.
@@ -81,10 +81,7 @@ public class MonsterList
 	public void ClearMonsterList()
     {
 		this.monsterList.Clear();
-		this.totalNumberOfMonsters = 0;
-		this.totalMonsterXP = 0;
-		this.XPAward = 0;
-		this.adjustedMonsterXP = 0;
+		ResetMonsterTotals();
     }
 
 	/*
@@ -93,6 +90,8 @@ public class MonsterList
 	 */
 	public void CalculateMonsterTotals(CharacterList characterList)
     {
+		ResetMonsterTotals();
+
 		foreach (Monster monster in this.monsterList)
         {
 			this.totalNumberOfMonsters += monster.GetNumberOfMonsters();
@@ -163,5 +162,16 @@ public class MonsterList
 		{
 			this.encounterDifficulty = "Very Easy";
 		}
+	}
+
+	/*
+	 * Resets all total values.
+	 */
+	private void ResetMonsterTotals()
+    {
+		this.totalNumberOfMonsters = 0;
+		this.totalMonsterXP = 0;
+		this.XPAward = 0;
+		this.adjustedMonsterXP = 0;
 	}
 }
