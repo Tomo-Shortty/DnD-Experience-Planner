@@ -28,7 +28,7 @@
         <Label x:Name="XPThresholdsLabel" Content="XP Thresholds" HorizontalAlignment="Left" Margin="10,400,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="215"/>
         <Button x:Name="AddCharacterButton" Content="Add" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14"/>
         <Button x:Name="ResetCharacterButton" Content="Reset" HorizontalAlignment="Left" Margin="90,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14"/>
-        <Button x:Name="CalculateXPButton" Content="Calculate" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top" Width="155" Height="40" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="CalculateXPButton" Content="Calculate" HorizontalAlignment="Left" Margin="10,319,0,0" VerticalAlignment="Top" Width="155" Height="40" FontSize="18" FontWeight="Bold" IsEnabled="False"/>
         <Button x:Name="AddMonsterButton" Content="Add" HorizontalAlignment="Left" Margin="450,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14"/>
         <Button x:Name="ResetMonsterButton" Content="Reset" HorizontalAlignment="Left" Margin="530,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14"/>
         <ComboBox x:Name="CharacterLevelSelector" HorizontalAlignment="Left" Margin="225,95,0,0" VerticalAlignment="Top" Width="215" Height="31" FontSize="16" SelectedIndex="0">
@@ -108,10 +108,16 @@
             <TextBlock x:Name="HardTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" Text="Hard" VerticalAlignment="Top" FontSize="16" Grid.Row="2" Grid.RowSpan="2"/>
             <TextBlock x:Name="DeadlyTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" Text="Deadly" VerticalAlignment="Top" FontSize="16" Grid.Row="3" Grid.RowSpan="2"/>
             <TextBlock x:Name="AdventuringDayTextBlock" HorizontalAlignment="Left" Margin="5,5,0,-1" TextWrapping="Wrap" Text="Adventuring Day" VerticalAlignment="Top" FontSize="16" Grid.Row="4"/>
+            <TextBlock x:Name="EasyXPTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="MediumXPTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" FontSize="16"/>
+            <TextBlock x:Name="HardXPTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="DeadlyXPTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="AdventuringDayXPTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
         </Grid>
         <Label x:Name="ResultsLabel" Content="Results" HorizontalAlignment="Left" Margin="450,400,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="215"/>
-        <Grid x:Name="ResultsGrid" HorizontalAlignment="Left" Height="155" Margin="450,431,0,0" VerticalAlignment="Top" Width="430">
+        <Grid x:Name="ResultsGrid" HorizontalAlignment="Left" Height="181" Margin="450,431,0,0" VerticalAlignment="Top" Width="430">
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -122,7 +128,20 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <TextBlock x:Name="CharactersLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" Text="Characters" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="MonstersLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Monsters" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="TotalXPLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Total XP" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="XPToAwardLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="3" TextWrapping="Wrap" Text="XP to Award" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="AdjustedXPLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Adjusted XP" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="EncounterDifficultyLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Encounter Difficulty" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="CharactersTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="MonstersTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="TotalXPTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="XPToAwardTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="AdjustedXPTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="EncounterDifficultyTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
         </Grid>
-        <Button x:Name="CalculateXPThresholdsButton" Content="Calculate Current Thresholds" HorizontalAlignment="Left" Margin="225,131,0,0" VerticalAlignment="Top" Width="215" Height="23" FontSize="14"/>
+        <Button x:Name="CalculateXPThresholdsButton" Content="Calculate Current Thresholds" HorizontalAlignment="Left" Margin="225,131,0,0" VerticalAlignment="Top" Width="215" Height="23" FontSize="14" IsEnabled="False"/>
+        <Button x:Name="ResetAllButton" Content="Reset All" HorizontalAlignment="Left" Margin="170,319,0,0" VerticalAlignment="Top" Width="155" Height="40" FontSize="18" FontWeight="Bold" Click="ResetAllButton_Click"/>
     </Grid>
 </Window>

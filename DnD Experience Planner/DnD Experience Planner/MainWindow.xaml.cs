@@ -20,9 +20,17 @@ namespace DnD_Experience_Planner
     /// </summary>
     public partial class MainWindow : Window
     {
+        private CharacterList characterList;
+        private MonsterList monsterList;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ResetAllButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
