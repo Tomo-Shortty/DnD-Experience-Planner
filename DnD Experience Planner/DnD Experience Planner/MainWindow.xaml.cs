@@ -32,7 +32,7 @@ namespace DnD_Experience_Planner
 
         private bool AllListsAreNotEmpty(CharacterList characterList, MonsterList monsterList)
         {
-            if (characterList.GetTotalNumberOfCharacters() <= 0 && monsterList.GetTotalNumberOfMonsters() <= 0)
+            if (characterList.GetCharacterListCount() <= 0 && monsterList.GetMonsterListCount() <= 0)
             {
                 return false;
             }

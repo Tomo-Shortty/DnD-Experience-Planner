@@ -22,8 +22,16 @@ public class MonsterList
 	 * Gets the total number of monsters in the list.
 	 */
 	public int GetTotalNumberOfMonsters()
-    {
+	{
 		return this.totalNumberOfMonsters;
+	}
+
+	/*
+	 * Gets the number of elements in the monster list.
+	 */
+	public int GetMonsterListCount()
+    {
+		return this.monsterList.Count;
     }
 
 	/*

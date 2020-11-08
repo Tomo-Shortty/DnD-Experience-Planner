@@ -28,6 +28,14 @@ public class CharacterList
     }
 
 	/*
+	 * Gets the total number of elements in the character list.
+	 */
+	public int GetCharacterListCount()
+    {
+		return this.characterList.Count;
+    }
+
+	/*
 	 * Gets the total 'Easy' experience.
 	 */
 	public int GetTotalEasyXP()

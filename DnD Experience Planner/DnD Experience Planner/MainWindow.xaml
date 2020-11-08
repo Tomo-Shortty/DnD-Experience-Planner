@@ -7,18 +7,6 @@
         mc:Ignorable="d"
         Title="D&amp;D Experience Planner 5e" Height="704" Width="900">
     <Grid x:Name="MainGrid" Margin="0,0,2,0">
-        <Grid x:Name="PartyGrid" HorizontalAlignment="Left" Height="155" Margin="10,159,0,0" VerticalAlignment="Top" Width="430">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-        </Grid>
-        <Grid x:Name="MonsterGrid" HorizontalAlignment="Right" Height="155" Margin="0,159,10,0" VerticalAlignment="Top" Width="430">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-        </Grid>
         <Label x:Name="PartyLabel" Content="Party" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Label x:Name="MonsterLabel" Content="Monsters" HorizontalAlignment="Left" Margin="450,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Label x:Name="NumCharactersLabel" Content="Number of Characters" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="215"/>
@@ -143,5 +131,7 @@
         </Grid>
         <Button x:Name="CalculateXPThresholdsButton" Content="Calculate Current Thresholds" HorizontalAlignment="Left" Margin="225,131,0,0" VerticalAlignment="Top" Width="215" Height="23" FontSize="14" IsEnabled="False" Click="CalculateXPThresholdsButton_Click"/>
         <Button x:Name="ResetAllButton" Content="Reset All" HorizontalAlignment="Left" Margin="170,319,0,0" VerticalAlignment="Top" Width="155" Height="40" FontSize="18" FontWeight="Bold" Click="ResetAllButton_Click"/>
+        <ListBox x:Name="CharacterListBox" HorizontalAlignment="Left" Height="155" Margin="10,159,0,0" VerticalAlignment="Top" Width="430"/>
+        <ListBox x:Name="MonsterListBox" HorizontalAlignment="Left" Height="155" Margin="450,159,0,0" VerticalAlignment="Top" Width="430"/>
     </Grid>
 </Window>
