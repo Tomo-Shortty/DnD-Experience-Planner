@@ -30,6 +30,12 @@ namespace DnD_Experience_Planner
             monsterList = new MonsterList();
         }
 
+        /// <summary>
+        /// Checks if the character list and monster list are empty.
+        /// </summary>
+        /// <param name="characterList"></param>
+        /// <param name="monsterList"></param>
+        /// <returns></returns>
         private bool AllListsAreNotEmpty(CharacterList characterList, MonsterList monsterList)
         {
             if (characterList.GetCharacterListCount() <= 0 && monsterList.GetMonsterListCount() <= 0)
@@ -59,6 +65,10 @@ namespace DnD_Experience_Planner
             XPToAwardTextBlock.Text = "";
             AdjustedXPTextBlock.Text = "";
             EncounterDifficultyTextBlock.Text = "";
+            CharacterListBox.Items.Clear();
+            MonsterListBox.Items.Clear();
+            RemoveCharacterButton.IsEnabled = false;
+            RemoveMonsterButton.IsEnabled = false;
         }
 
         private void ResetCharacterButton_Click(object sender, RoutedEventArgs e)
@@ -71,6 +81,8 @@ namespace DnD_Experience_Planner
             HardXPTextBlock.Text = "";
             DeadlyXPTextBlock.Text = "";
             AdventuringDayXPTextBlock.Text = "";
+            CharacterListBox.Items.Clear();
+            RemoveCharacterButton.IsEnabled = false;
         }
 
         private void ResetMonsterButton_Click(object sender, RoutedEventArgs e)
@@ -83,6 +95,8 @@ namespace DnD_Experience_Planner
             XPToAwardTextBlock.Text = "";
             AdjustedXPTextBlock.Text = "";
             EncounterDifficultyTextBlock.Text = "";
+            MonsterListBox.Items.Clear();
+            RemoveMonsterButton.IsEnabled = false;
         }
 
         private void AddCharacterButton_Click(object sender, RoutedEventArgs e)
@@ -91,8 +105,22 @@ namespace DnD_Experience_Planner
             {
                 Character newCharacter = new Character(CharacterLevelSelector.Text, Convert.ToInt32(NumCharactersTextBox.Text));
                 characterList.AddToCharacterList(newCharacter);
+                
+                //add entry to the character listbox and determine the output string based on number of characters
+                ListBoxItem item = new ListBoxItem();
+                if (newCharacter.GetNumberOfCharacters() > 1)
+                {
+                    item.Content = Convert.ToString(newCharacter.GetNumberOfCharacters()) + " Level " + newCharacter.GetCharacterLevel() + " characters";
+                }
+                else
+                {
+                    item.Content = Convert.ToString(newCharacter.GetNumberOfCharacters()) + " Level " + newCharacter.GetCharacterLevel() + " character";
+                }
+                CharacterListBox.Items.Add(item);
+
                 CalculateXPThresholdsButton.IsEnabled = true;
 
+                //determine if CalculateXPButton should be enabled
                 if (AllListsAreNotEmpty(characterList, monsterList))
                 {
                     CalculateXPButton.IsEnabled = true;
@@ -111,6 +139,19 @@ namespace DnD_Experience_Planner
                 Monster newMonster = new Monster(MonsterCRSelector.Text, Convert.ToInt32(NumMonstersTextBox.Text));
                 monsterList.AddtoMonsterList(newMonster);
 
+                //add entry to the monster listbox and determine the output string based on number of monsters
+                ListBoxItem item = new ListBoxItem();
+                if (newMonster.GetNumberOfMonsters() > 1)
+                {
+                    item.Content = Convert.ToString(newMonster.GetNumberOfMonsters()) + " monsters with a CR of " + newMonster.GetChallengeRating();
+                }
+                else
+                {
+                    item.Content = Convert.ToString(newMonster.GetNumberOfMonsters()) + " monster with a CR of " + newMonster.GetChallengeRating();
+                }                
+                MonsterListBox.Items.Add(item);
+
+                //determine if CalculateXPButton should be enabled
                 if (AllListsAreNotEmpty(characterList, monsterList))
                 {
                     CalculateXPButton.IsEnabled = true;
@@ -147,6 +188,28 @@ namespace DnD_Experience_Planner
             XPToAwardTextBlock.Text = Convert.ToString(monsterList.GetXPAward()) + " XP";
             AdjustedXPTextBlock.Text = Convert.ToString(monsterList.GetAdjustedMonsterXP()) + " XP";
             EncounterDifficultyTextBlock.Text = Convert.ToString(monsterList.GetEncounterDifficulty());
+        }
+
+        private void CharacterListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RemoveCharacterButton.IsEnabled = true;
+        }
+
+        private void MonsterListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RemoveMonsterButton.IsEnabled = true;
+        }
+
+        private void RemoveCharacterButton_Click(object sender, RoutedEventArgs e)
+        {
+            characterList.RemoveCharacterFromList(CharacterListBox.SelectedIndex);
+            CharacterListBox.Items.RemoveAt(CharacterListBox.SelectedIndex);
+        }
+
+        private void RemoveMonsterButton_Click(object sender, RoutedEventArgs e)
+        {
+            monsterList.RemoveMonsterFromList(MonsterListBox.SelectedIndex);
+            MonsterListBox.Items.RemoveAt(MonsterListBox.SelectedIndex);
         }
     }
 }

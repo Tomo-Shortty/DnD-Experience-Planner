@@ -76,20 +76,20 @@ public class CharacterList
     }
 
 	/*
-	 * Creates a new character element that is to be added the character list.
-	 *
-	public Character CreateCharacter(string characterLevel, int quantity)
-    {
-		return new Character(characterLevel, quantity);
-    }*/
-
-	/*
 	 * Sets the experience of the character element and adds it to the character list.
 	 */
 	public void AddToCharacterList(Character character)
     {
 		character.SetCharacterXP(character.GetCharacterLevel());
 		this.characterList.Add(character);
+    }
+
+	/*
+	 * Removes a character element from the list. An index is used to determine the element to remove.
+	 */
+	public void RemoveCharacterFromList(int index)
+    {
+		this.characterList.RemoveAt(index);
     }
 
 	/*

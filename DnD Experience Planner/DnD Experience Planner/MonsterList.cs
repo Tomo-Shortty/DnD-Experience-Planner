@@ -67,20 +67,20 @@ public class MonsterList
     }
 
 	/*
-	 * Creates a new monster element.
-	 *
-	public Monster CreateMonster(string challengeRating, int quantity)
-    {
-		return new Monster(challengeRating, quantity);
-    }*/
-
-	/*
-	 * Sets the experience of the monster element and adds it to the list.
+	 * Sets the experience of the monster element and adds it to the monster list.
 	 */
 	public void AddtoMonsterList(Monster monster)
     {
 		monster.SetMonsterXP(monster.GetChallengeRating());
 		this.monsterList.Add(monster);
+    }
+
+	/*
+	 * Removes a monster element from the list. An index is used to determine the element to remove.
+	 */
+	public void RemoveMonsterFromList(int index)
+    {
+		this.monsterList.RemoveAt(index);
     }
 
 	/*
