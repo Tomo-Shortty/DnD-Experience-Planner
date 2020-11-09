@@ -5,4 +5,6 @@ This is a personal project that has been undertaken to provide Dungeons and Drag
 
 I have also used this as an opportunity to practice C#.
 
-More details will be added to this README as the project is developed.
+---------------------------------------------------------------------------------------------------------------
+
+Base functionality has been completed. Application is now ready for use. Extra features are now in development.
