@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnD_Experience_Planner"
         mc:Ignorable="d"
-        Title="D&amp;D Experience Planner 5e" Height="700" Width="900">
+        Title="D&amp;D Experience Planner 5e" Height="700" Width="1338">
     <Grid x:Name="MainGrid" Margin="0,0,2,0">
         <Label x:Name="PartyLabel" Content="Party" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Label x:Name="MonsterLabel" Content="Monsters" HorizontalAlignment="Left" Margin="450,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
@@ -135,5 +135,25 @@
         <ListBox x:Name="MonsterListBox" HorizontalAlignment="Left" Height="155" Margin="450,159,0,0" VerticalAlignment="Top" Width="430" SelectionChanged="MonsterListBox_SelectionChanged"/>
         <Button x:Name="RemoveMonsterButton" Content="Remove" HorizontalAlignment="Left" Margin="530,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14" IsEnabled="False" Click="RemoveMonsterButton_Click"/>
         <Button x:Name="RemoveCharacterButton" Content="Remove" HorizontalAlignment="Left" Margin="90,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14" IsEnabled="False" Click="RemoveCharacterButton_Click"/>
+        <ListBox x:Name="EncounterListBox" HorizontalAlignment="Left" Height="323" Margin="890,59,0,0" VerticalAlignment="Top" Width="430"/>
+        <Label x:Name="EncounterLabel" Content="Encounters" HorizontalAlignment="Left" Margin="890,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Grid x:Name="EncounterTotalsGrid" HorizontalAlignment="Left" Height="64" Margin="890,431,0,0" VerticalAlignment="Top" Width="430">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="TotalEncounterXPLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" Text="Total XP" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="EncounterTotalXPAwardLabelTextBlock" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Total XP to Award" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="TotalEncounterXPTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock x:Name="EncounterTotalXPAwardTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="5,5,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        </Grid>
+        <Button x:Name="AddToEncounterListButton" Content="Add To Encounter List" HorizontalAlignment="Left" Margin="665,319,0,0" VerticalAlignment="Top" Width="215" Height="40" FontSize="18" FontWeight="Bold" IsEnabled="False" Click="AddToEncounterListButton_Click"/>
+        <Button x:Name="RemoveEncounterButton" Content="Remove" HorizontalAlignment="Left" Margin="890,387,0,0" VerticalAlignment="Top" Width="75" FontSize="14" IsEnabled="False" Click="RemoveEncounterButton_Click"/>
+        <Button x:Name="ResetEncounterButton" Content="Reset" HorizontalAlignment="Left" Margin="1050,387,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="ResetEncounterButton_Click"/>
+        <Button x:Name="EditEncounterButton" Content="Edit" HorizontalAlignment="Left" Margin="970,387,0,0" VerticalAlignment="Top" Width="75" FontSize="14" IsEnabled="False" Click="EditEncounterButton_Click"/>
     </Grid>
 </Window>

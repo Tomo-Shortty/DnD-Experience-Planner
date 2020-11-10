@@ -211,5 +211,25 @@ namespace DnD_Experience_Planner
             monsterList.RemoveMonsterFromList(MonsterListBox.SelectedIndex);
             MonsterListBox.Items.RemoveAt(MonsterListBox.SelectedIndex);
         }
+
+        private void AddToEncounterListButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveEncounterButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditEncounterButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ResetEncounterButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
