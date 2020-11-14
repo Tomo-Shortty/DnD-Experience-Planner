@@ -22,12 +22,14 @@ namespace DnD_Experience_Planner
     {
         private static CharacterList characterList;
         private static MonsterList monsterList;
+        private static EncounterList encounterList;
 
         public MainWindow()
         {
             InitializeComponent();
             characterList = new CharacterList();
             monsterList = new MonsterList();
+            encounterList = new EncounterList();
         }
 
         /// <summary>
@@ -124,6 +126,7 @@ namespace DnD_Experience_Planner
                 if (AllListsAreNotEmpty(characterList, monsterList))
                 {
                     CalculateXPButton.IsEnabled = true;
+                    AddToEncounterListButton.IsEnabled = true;
                 }
             } 
             catch (Exception ex)
@@ -155,6 +158,7 @@ namespace DnD_Experience_Planner
                 if (AllListsAreNotEmpty(characterList, monsterList))
                 {
                     CalculateXPButton.IsEnabled = true;
+                    AddToEncounterListButton.IsEnabled = true;
                 }
             }
             catch (Exception ex)
@@ -204,22 +208,44 @@ namespace DnD_Experience_Planner
         {
             characterList.RemoveCharacterFromList(CharacterListBox.SelectedIndex);
             CharacterListBox.Items.RemoveAt(CharacterListBox.SelectedIndex);
+            RemoveCharacterButton.IsEnabled = false;
         }
 
         private void RemoveMonsterButton_Click(object sender, RoutedEventArgs e)
         {
             monsterList.RemoveMonsterFromList(MonsterListBox.SelectedIndex);
             MonsterListBox.Items.RemoveAt(MonsterListBox.SelectedIndex);
+            RemoveMonsterButton.IsEnabled = false;
         }
 
         private void AddToEncounterListButton_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Encounter encounter = new Encounter(monsterList);
+                encounterList.AddToEncounterList(encounter);
 
+                ListBoxItem item = new ListBoxItem();
+                item.Content = encounter.GetMonsterDetails() + Convert.ToString(encounter.GetTotalEncounterXP()) + " XP, " + encounter.GetDifficulty();
+                EncounterListBox.Items.Add(item);
+                TotalEncounterXPTextBlock.Text = Convert.ToString(encounterList.GetTotalXP()) + " XP";
+                EncounterTotalXPAwardTextBlock.Text = Convert.ToString(encounterList.GetTotalXPAward()) + " XP";
+
+                MonsterListBox.Items.Clear();
+                monsterList.ClearMonsterList();
+                RemoveMonsterButton.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }            
         }
 
         private void RemoveEncounterButton_Click(object sender, RoutedEventArgs e)
         {
-
+            encounterList.RemoveFromEncounterList(EncounterListBox.SelectedIndex);
+            EncounterListBox.Items.RemoveAt(EncounterListBox.SelectedIndex);
+            RemoveEncounterButton.IsEnabled = false;
         }
 
         private void EditEncounterButton_Click(object sender, RoutedEventArgs e)
@@ -229,7 +255,18 @@ namespace DnD_Experience_Planner
 
         private void ResetEncounterButton_Click(object sender, RoutedEventArgs e)
         {
+            EncounterListBox.Items.Clear();
+            encounterList.ClearEncounterList();
+            TotalEncounterXPTextBlock.Text = "";
+            EncounterTotalXPAwardTextBlock.Text = "";
+            RemoveEncounterButton.IsEnabled = false;
+            EditEncounterButton.IsEnabled = false;
+        }
 
+        private void EncounterListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RemoveEncounterButton.IsEnabled = true;
+            EditEncounterButton.IsEnabled = true;
         }
     }
 }

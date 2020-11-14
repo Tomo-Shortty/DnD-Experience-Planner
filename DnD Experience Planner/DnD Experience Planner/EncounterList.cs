@@ -34,6 +34,7 @@ namespace DnD_Experience_Planner
         public void AddToEncounterList(Encounter encounter)
         {
             this.encounterList.Add(encounter);
+            CalculateEncounterTotals();
 
         }
 

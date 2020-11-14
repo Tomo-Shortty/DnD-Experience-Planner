@@ -51,5 +51,28 @@ namespace DnD_Experience_Planner
         {
             return this.difficulty;
         }
+
+        /// <summary>
+        /// Gets the quantity and challenge rating of each monster in the monster list so it can be displayed in the encounter list.
+        /// </summary>
+        /// <returns></returns>
+        public string GetMonsterDetails()
+        {
+            string details = "";
+
+            for (int i = 0; i < this.monsterList.GetMonsterListCount(); i++)
+            {
+                if (this.monsterList.GetMonster(i).GetNumberOfMonsters() > 1)
+                {
+                    details += Convert.ToString(this.monsterList.GetMonster(i).GetNumberOfMonsters()) + " monsters with a CR of " + this.monsterList.GetMonster(i).GetChallengeRating() + "\n";
+                }
+                else
+                {
+                    details += Convert.ToString(this.monsterList.GetMonster(i).GetNumberOfMonsters()) + " monster with a CR of " + this.monsterList.GetMonster(i).GetChallengeRating() + "\n";
+                }
+            }
+
+            return details;
+        }
     }
 }

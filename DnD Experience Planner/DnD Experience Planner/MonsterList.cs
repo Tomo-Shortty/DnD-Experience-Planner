@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 public class MonsterList
 {
@@ -17,6 +20,14 @@ public class MonsterList
 	{
 		this.monsterList = new List<Monster>();
 	}
+
+	/*
+	 * Gets the monster element at the specified index.
+	 */
+	public Monster GetMonster(int index)
+    {
+		return this.monsterList[index];
+    }
 
 	/*
 	 * Gets the total number of monsters in the list.

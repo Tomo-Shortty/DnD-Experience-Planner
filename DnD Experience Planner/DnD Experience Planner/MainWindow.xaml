@@ -135,7 +135,7 @@
         <ListBox x:Name="MonsterListBox" HorizontalAlignment="Left" Height="155" Margin="450,159,0,0" VerticalAlignment="Top" Width="430" SelectionChanged="MonsterListBox_SelectionChanged"/>
         <Button x:Name="RemoveMonsterButton" Content="Remove" HorizontalAlignment="Left" Margin="530,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14" IsEnabled="False" Click="RemoveMonsterButton_Click"/>
         <Button x:Name="RemoveCharacterButton" Content="Remove" HorizontalAlignment="Left" Margin="90,131,0,0" VerticalAlignment="Top" Width="75" FontSize="14" IsEnabled="False" Click="RemoveCharacterButton_Click"/>
-        <ListBox x:Name="EncounterListBox" HorizontalAlignment="Left" Height="323" Margin="890,59,0,0" VerticalAlignment="Top" Width="430"/>
+        <ListBox x:Name="EncounterListBox" HorizontalAlignment="Left" Height="323" Margin="890,59,0,0" VerticalAlignment="Top" Width="430" SelectionChanged="EncounterListBox_SelectionChanged"/>
         <Label x:Name="EncounterLabel" Content="Encounters" HorizontalAlignment="Left" Margin="890,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
         <Grid x:Name="EncounterTotalsGrid" HorizontalAlignment="Left" Height="64" Margin="890,431,0,0" VerticalAlignment="Top" Width="430">
             <Grid.RowDefinitions>
