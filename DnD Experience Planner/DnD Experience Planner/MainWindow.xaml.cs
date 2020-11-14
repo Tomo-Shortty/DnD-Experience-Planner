@@ -245,12 +245,30 @@ namespace DnD_Experience_Planner
         {
             encounterList.RemoveFromEncounterList(EncounterListBox.SelectedIndex);
             EncounterListBox.Items.RemoveAt(EncounterListBox.SelectedIndex);
+            TotalEncounterXPTextBlock.Text = Convert.ToString(encounterList.GetTotalXP()) + " XP";
+            EncounterTotalXPAwardTextBlock.Text = Convert.ToString(encounterList.GetTotalXPAward()) + " XP";
             RemoveEncounterButton.IsEnabled = false;
+            EditEncounterButton.IsEnabled = false;
         }
 
         private void EditEncounterButton_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                /*Monster monster = new Monster(MonsterCRSelector.Text, Convert.ToInt32(NumMonstersTextBox.Text));
+                monsterList.AddtoMonsterList(monster);*/
 
+                encounterList.RemoveFromEncounterList(EncounterListBox.SelectedIndex);
+                EncounterListBox.Items.RemoveAt(EncounterListBox.SelectedIndex);
+                TotalEncounterXPTextBlock.Text = Convert.ToString(encounterList.GetTotalXP()) + " XP";
+                EncounterTotalXPAwardTextBlock.Text = Convert.ToString(encounterList.GetTotalXPAward()) + " XP";
+                RemoveEncounterButton.IsEnabled = false;
+                EditEncounterButton.IsEnabled = false;
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ResetEncounterButton_Click(object sender, RoutedEventArgs e)

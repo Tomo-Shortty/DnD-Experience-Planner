@@ -21,6 +21,11 @@ namespace DnD_Experience_Planner
             this.encounterList = new List<Encounter>();
         }
 
+        /*public Encounter GetEncounter(int index)
+        {
+            return this.encounterList[index];
+        }*/
+
         public int GetTotalXP()
         {
             return this.totalXP;
@@ -41,6 +46,7 @@ namespace DnD_Experience_Planner
         public void RemoveFromEncounterList(int index)
         {
             this.encounterList.RemoveAt(index);
+            CalculateEncounterTotals();
         }
 
         public void ClearEncounterList()
@@ -49,7 +55,7 @@ namespace DnD_Experience_Planner
             ResetEncounterTotals();
         }
 
-        public void CalculateEncounterTotals()
+        private void CalculateEncounterTotals()
         {
             ResetEncounterTotals();
 
