@@ -234,6 +234,8 @@ namespace DnD_Experience_Planner
                 MonsterListBox.Items.Clear();
                 monsterList.ClearMonsterList();
                 RemoveMonsterButton.IsEnabled = false;
+                
+                AddToEncounterListButton.IsEnabled = false;
             }
             catch (Exception ex)
             {
@@ -248,22 +250,20 @@ namespace DnD_Experience_Planner
             TotalEncounterXPTextBlock.Text = Convert.ToString(encounterList.GetTotalXP()) + " XP";
             EncounterTotalXPAwardTextBlock.Text = Convert.ToString(encounterList.GetTotalXPAward()) + " XP";
             RemoveEncounterButton.IsEnabled = false;
-            EditEncounterButton.IsEnabled = false;
+            //EditEncounterButton.IsEnabled = false;
         }
 
         private void EditEncounterButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                /*Monster monster = new Monster(MonsterCRSelector.Text, Convert.ToInt32(NumMonstersTextBox.Text));
-                monsterList.AddtoMonsterList(monster);*/
 
                 encounterList.RemoveFromEncounterList(EncounterListBox.SelectedIndex);
                 EncounterListBox.Items.RemoveAt(EncounterListBox.SelectedIndex);
                 TotalEncounterXPTextBlock.Text = Convert.ToString(encounterList.GetTotalXP()) + " XP";
                 EncounterTotalXPAwardTextBlock.Text = Convert.ToString(encounterList.GetTotalXPAward()) + " XP";
                 RemoveEncounterButton.IsEnabled = false;
-                EditEncounterButton.IsEnabled = false;
+                //EditEncounterButton.IsEnabled = false;
             } 
             catch (Exception ex)
             {
@@ -278,13 +278,13 @@ namespace DnD_Experience_Planner
             TotalEncounterXPTextBlock.Text = "";
             EncounterTotalXPAwardTextBlock.Text = "";
             RemoveEncounterButton.IsEnabled = false;
-            EditEncounterButton.IsEnabled = false;
+            //EditEncounterButton.IsEnabled = false;
         }
 
         private void EncounterListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             RemoveEncounterButton.IsEnabled = true;
-            EditEncounterButton.IsEnabled = true;
+            //EditEncounterButton.IsEnabled = true;
         }
     }
 }

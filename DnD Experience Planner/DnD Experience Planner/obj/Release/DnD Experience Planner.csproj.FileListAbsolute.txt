@@ -13,3 +13,7 @@ C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Exper
 C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Release\DnD Experience Planner.csproj.CoreCompileInputs.cache
 C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Release\DnD Experience Planner.exe
 C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Release\DnD Experience Planner.pdb
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\bin\Release\DnD Experience Planner.exe.manifest
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\bin\Release\DnD Experience Planner.application
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Release\DnD Experience Planner.exe.manifest
+C:\Users\Tomo\Documents\Programming\Projects\C#\DnD-Experience-Planner\DnD Experience Planner\DnD Experience Planner\obj\Release\DnD Experience Planner.application

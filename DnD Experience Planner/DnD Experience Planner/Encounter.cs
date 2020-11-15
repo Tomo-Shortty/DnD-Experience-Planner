@@ -28,7 +28,7 @@ namespace DnD_Experience_Planner
         /// <summary>
         /// Returns the total encounter experience.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The total experience</returns>
         public int GetTotalEncounterXP()
         {
             return this.totalEncounterXP;
@@ -37,7 +37,7 @@ namespace DnD_Experience_Planner
         /// <summary>
         /// Returns the experience to award each character.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The total experience to award each character</returns>
         public double GetXPAward()
         {
             return this.XPAward;
@@ -46,7 +46,7 @@ namespace DnD_Experience_Planner
         /// <summary>
         /// Returns the difficulty of the encounter.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The encounter difficulty</returns>
         public string GetDifficulty()
         {
             return this.difficulty;
@@ -55,7 +55,7 @@ namespace DnD_Experience_Planner
         /// <summary>
         /// Gets the quantity and challenge rating of each monster in the monster list so it can be displayed in the encounter list.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A string displaying the quantity and challenge rating of each monster</returns>
         public string GetMonsterDetails()
         {
             string details = "";
